@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CBR - Contact Us</title>
+    <!-- <link href="reset.css" type="text/css" rel="stylesheet" /> -->
+    <link href="reset.css" type="text/css" rel="stylesheet" />
+    <link href="styles1.css" type="text/css" rel="stylesheet" />
+    <link href="mobile.css" type="text/css" rel="stylesheet" media="only screen and (max-width: 480px)"/>
+
+    <!--
+  CIS155 Online - Professor Garripolli Web Development I
+  Project v4 HTML and CSS
+  Student: Justin Hitchner
+  Date: 6/9/2019
+  Filename: ContactUs.html
+-->
+</head>
+
+<!-- Navigation -->
+<body>
+    <header>
+        <h1><a href = "index.html"><img src="fbcovercbr.png" alt="CBR Custom Carpentry"/></a></h1>
+        <!-- Cited Source for FBLogo: newdesignfile.com, http://www.newdesignfile.com/postpic/2015/01/like-us-on-facebook-logo-transparent_306210.png for academic use. -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="OutdoorProjects.html">Outdoor</a></li>
+            <li><a href="InteriorProjects.html">Interior</a></li>
+            <li><a href="Reviews.html">Reviews</a></li>
+            <li><a href="MeetTheTeam.html">The Team</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
+
+
+<!-- Beginning Page Content -->
+<article class="contact">
+  <h2 id="contactus">Contact Us!</h2>
+    <p>
+      <!-- This page is intentionally bare, I want to later put in a form that will allow customers to fill out an email and send it directly to the company -->
+        <span class="firstletterY">Y</span>ou can get ahold of any of our team members by contacting them from the information found on this very page! Please understand we are still underconstruction, so this page
+      might see a little empty, but we are working hard to get it up and running just for you! Thank you so much for your patience.
+      In the meantime...
+      &#9742; Call <a href="tel:+18508679076">(850) 867-9076</a> or <a href="tel:+18506248317">(850) 624-8317</a> to get a quote or ask a question, or use the convenient form below to
+      send us a message!
+      &#9832; Chat with us on Facebook! You can get there by clicking this awesome picture! <br/><a href="https://www.facebook.com/cbrcustomcarpentry/"><img id="follow" src="follow.png" alt="Follow Us!"/></a>
+    </p>
+</article>
+<!-- If i am correct in my research this mailto command only works in IE browsers... unless you go with a custom script for "Form Mail" that is uploaded to the server.
+Can you shed some light on this please if you have the time? -->
+<section>
+  <h2 id="askanything">Ask us Anything!</h2>
+<p><span class="firstletterI">I</span> f you have questions about a project or how we do things or maybe you want to submit a comment about our service, this would be the perfect place to let us know!
+  Fill in the information below and when you click the "Send it!" button, it will arrive directly inside our company email for our team members to read right away!
+</p>
+  <form action="mailto:Cbrcustomcarpentry@yahoo.com" method="post">
+    <label for="first">First Name*:</label>
+    <textarea name="firstname" id="first" required></textarea>
+<!-- M7LO5 Demonstrate the use of a text box in a form -->
+    <label for="last">Last Name*:</label>
+    <textarea name="lastname" id="last" required></textarea>
+
+    <label for="phone">Phone Number*:</label>
+    <input type="tel" name="phone" id="phone" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" value="(XXX)XXX-XXXX" required>
+
+    <label for="address">Address*:</label>
+    <textarea name="address" id="address" required></textarea>
+
+    <label for="state">State*:</label>
+    <textarea name="address" id="state" required></textarea>
+
+    <label for="zip">Zip Code*:</label>
+    <textarea name="zip" id="zip" required></textarea>
+<!-- M7LO8 Demonstrate the use of a selection list in a form -->
+    <label for="referral">How did you hear about us?:</label>
+    <select id="referral">
+      <option value="facebook">Facebook Ad</option>
+      <option value="card">Business Card</option>
+      <option value="friend">Friend</option>
+      <option value="teammember">Referred by Team Member</option>
+      <option value="Web">Website Posting (Craigslist)</option>
+    </select>
+<!-- M7LO9 Demonstrate the use of a text area in a form -->
+    <label for="message">What would you like to let us know?*:</label>
+    <textarea id="message" name="name" required></textarea>
+    <!-- I was messing around with flex boxes, display:block commands, floating, tables, I could not seem
+        to figure out how to get that submit button to display properly below the text box and after almost an hour of
+      sitting here trying to figure it out I got mad at it for not doing what I want it to do. I reviewed the lesson on forms
+      and re-read all the information on submit buttons and flex boxes etc for W3Schools and all the information I am finding
+      is leading me to "insert break commands" so as you can see that is what I have done here. I even tried using before and after
+      selectors to no avail, so I give up. If i lose points for this so be it, I accept your judgement. /endrant -->
+    <br /><br /><br /><br />
+    <!-- M7LO10 Demonstrate the use of a submit button in a form -->
+    <p><input id="submit" type="submit" name="submit" value="Send it!"></p>
+
+  </form>
+</section>
+
+
+<!-- Ending Page Content -->
+
+  <footer>
+      &#9874; Contact Brian (850) 867-9076 or Ryan (850) 624-8317 for a quote today! &#9874;<br />
+      Created by Justin Hitchner for Academic Use Spring 2019 Olympic College CIS155
+      <cite>HSL/RGB Colors sourced from <a href="http://hslpicker.com/">HSL Color Picker</a></cite>
+  </footer>
+
+</body>
+</html>

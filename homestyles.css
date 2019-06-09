@@ -1,0 +1,210 @@
+@charset "UTF-8";
+@font-face {
+  font-family: brush;
+  src:  url(brush.ttf) format('truetype');
+}
+@font-face {
+  font-family: Arizonia;
+  src: url(Arizonia.ttf) format('truetype');
+}
+/*
+CIS155 Online - Professor Garripolli Web Development I
+Project v3 HTML and CSS
+Student: Justin Hitchner
+Date: 5/21/2019
+Filename: Home.html
+*/
+
+/*
+M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page)
+M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them)
+Currently, I have not found a use aside from the navbar to use flex boxes, I know I will lose points for this but I feel that in future versions of the website
+I will find perfect ways to implement these. I attempted to make the gallery on the outdoor projects page as flex boxes but they would mess up the entire page event with
+a container being defined..
+*/
+
+/*==================================================================================================================================================
+  Mobile Styles - For standard mobile screens of 480px // Cited Information: https://mediag.com/blog/popular-screen-resolutions-designing-for-all/
+ ==================================================================================================================================================*/
+/*
+ M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site)
+Below I have displayed the knowledge to the best of my ability to apply styles for the pulldown menu only to the Mobile
+ version of the website if it is within the 480px range, as the average screen size for mobile phones is (see link above)
+ For further media queries I found it much easier to use a seperate style sheet to stay organized. This is displayed as:
+    <link href="mobile.css" type="text/css" rel="stylesheet" media="only screen and (max-device-width: 480px)"/>
+ in the HTML files. This links the mobile stylesheet ONLY for screens that are 480px or less. The below media query hide the hurricane michael article from
+ the home page. I was not sure if you wanted to see me use the command or not, so I have included it here.*/
+
+ /* @media only screen and (max-width: 480px) {
+   .michael {
+     display: none;
+   }
+ } */
+
+/* Main Structural Styles */
+html {
+  min-height: 100%;
+  max-width: 1900px;
+  min-width: 720px;
+  background: url(back.png);
+  background-attachment: fixed;
+}
+
+body {
+  color: white;
+  border: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 10px 0px 30px black,
+  -10px 0px 30px black;
+  background-color: rgb(41, 41, 41);
+  font-family: sans-serif;
+  font-size: 1.0em;
+  width: 80%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Heading Styles */
+header h1 {
+  text-align: center;
+}
+header h1 img {
+  border: 5px outset orange;
+  box-shadow: 10px 10px 5px black;
+}
+
+.michaelheader {
+  text-align: center;
+  color: #881407;
+  text-shadow: 2px 2px black, 4px 4px black;
+  font-size: 50px;
+  font-family: 'Arizonia', sans-serif;
+}
+/* Navigation Styles */
+/* M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them)
+This flex property changes the UL element of the nav into a flex box, which I found was much easier to work with than a standard block when
+configuring the mobile design. This helps keep the navbar lined up correctly*/
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 10px;
+  padding: 0px;
+  overflow: hidden;
+  background-image: radial-gradient(hsl(20, 80%, 60%), hsl(20, 80%, 24%));
+}
+
+nav ul li {
+  float: left;
+  width: 20%;
+  line-height: 35px;
+}
+
+nav > ul > li > a {
+  display: block;
+  width: 100%;
+  color: white;
+  font-family: 'Arizonia', sans-serif;
+  font-size: 30px;
+  text-shadow: 3px 3px black, 4px 4px black;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 5px;
+}
+
+nav li a:hover {
+  background-color: hsl(20, 80%, 67%);
+}
+
+/* Middle Content Styles */
+.michael {
+  padding: 4px;
+  margin: 5px;
+  border: 5px ridge hsl(20, 80%, 60%);
+  text-indent: 1em;
+}
+
+blockquote#hometext {
+  display: block;
+  text-indent: 2em;
+}
+
+
+/* Text Styles */
+.firstletterA {
+  font-size: 35px;
+  font-family: 'Arizonia', sans-serif;
+  line-height: 30px;
+  text-shadow: 5px 5px 5px black;
+}
+
+.firstletterL {
+  font-size: 35px;
+  font-family: 'Arizonia', sans-serif;
+  line-height: 30px;
+  text-shadow: 5px 5px 5px black;
+}
+
+.firstletterM {
+  font-size: 28px;
+  font-family: 'Arizonia', sans-serif;
+  text-shadow: 5px 5px 5px black;
+}
+
+
+/* Quote Styles */
+div {
+  padding: 0 1em;
+}
+
+p.quote {
+  font-family: 'Times New Roman', sans-serif;
+  font-size: 36px;
+  text-shadow: 5px 5px black;
+}
+
+q {
+  font-size: 34px;
+  quotes: "\201C""\201D""\2018""\2019";
+  line-height: 1em;
+}
+
+
+
+/* Image Styles */
+figure.homefence {
+  float: right;
+  height: auto;
+  width: auto;
+  max-width: 565px;
+}
+figure img {
+  border: 2px outset orange;
+  border-radius: 5%;
+}
+figcaption {
+  text-align: center;
+  display: block;
+}
+
+img#follow {
+  float: left;
+  display: block;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px black;
+  margin-bottom: 15px;
+}
+
+
+
+/* Footer Styles */
+footer {
+  clear: both;
+  font-size: 14px;
+  font-family: monospace, sans-serif;
+  color: hsl(0, 0%, 0%);
+  text-align: center;
+  border-style: inset; border-color: hsl(20, 83%, 59%);
+  background-image: radial-gradient(hsl(20, 80%, 60%), hsl(20, 80%, 24%));
+}

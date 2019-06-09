@@ -1,0 +1,53 @@
+@charset "UTF-8";
+@font-face {
+  font-family: brush;
+  src:  url(brush.ttf) format('truetype');
+}
+@font-face {
+  font-family: Arizonia;
+  src: url(Arizonia.ttf) format('truetype');
+}
+/*
+CIS155 Online - Professor Garripolli Web Development I
+Project v2 HTML and CSS
+Student: Justin Hitchner
+Date: 5/6/2019
+Filename: mobile.css
+*/
+html {
+  background-image: radial-gradient(hsl(20, 80%, 60%), hsl(20, 80%, 24%));
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+header h1 img {
+  border: 5px outset orange;
+  box-shadow: 10px 10px 5px black;
+  width: 90%;
+}
+
+img#follow{
+  display: none;
+}
+
+nav > ul > li > a {
+  display: block;
+  color: white;
+  font-family: "Times New Roman", sans-serif;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 5px;
+}
+
+.michael {
+  display: none;
+}
+
+footer {
+  display: none;
+}

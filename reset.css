@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/*
+CIS155 Online - Professor Garripolli Web Development I
+Project v2 HTML and CSS
+   Author Justin Hitchner
+   Date   5/6/2019
+
+   Filename reset.css
+*/
+
+
+/* Structural Styles */
+article, aside, figcaption, figure,
+footer, header, main, nav, section{
+  display block;
+}
+
+
+
+/* Typographic Styles */
+/* If I missed an element in this chunk please let me know, I think I got them all based on the reading and W3C website */
+/* M3LO11 Demonstrate -prefix- style browser extensions use in CSS (Here I have used the webkit and moz prefixes for mozilla and chrome browser stability) */
+address, article, aside, blockquote, body, cite,
+div, dl, dt, dd, em, figcaption, figure, footer,
+header, h1, h2, h3, h4, h5, h6, html, img,
+li, main, nav, ol, p, section, span, ul {
+  background transparent;
+  font-size 100%;
+  margin 0;
+  padding 0;
+  vertical-align baseline;
+  -webkit-box-sizing border-box;
+  -moz-box-sizing border-box;
+  box-sizing border-box;
+}
+
+nav ul {
+  list-style none;
+  list-style-image none;
+}
+
+nav a {
+  text-decoration none;
+}
